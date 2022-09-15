@@ -46,7 +46,7 @@ public class EmailReaderImpl implements EmailReader {
         properties.setProperty("mail.store.protocol", "imap");
         properties.setProperty("mail.debug", DEBUG);
         properties.setProperty("mail.imap.host", DOMEN);
-        properties.setProperty("mail.imap.port", "993");
+        properties.setProperty("mail.imap.port", "143");
         properties.setProperty("mail.imap.ssl.enable", "true");
         return properties;
     }
