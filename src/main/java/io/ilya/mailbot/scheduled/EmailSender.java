@@ -43,6 +43,10 @@ public class EmailSender {
         VkApiClient vk = new VkApiClient(transportClient);
         GroupActor actor = new GroupActor(GROUP_ID, ACCESS_TOKEN);
         List<Message> newEmails = emailReader.getNewEmails();
+        if (newEmails == null) {
+            log.error("Won't send emails");
+            return;
+        }
         log.info("Found " + newEmails.size() + " email(s).");
         for (Message email : newEmails) {
             try {
