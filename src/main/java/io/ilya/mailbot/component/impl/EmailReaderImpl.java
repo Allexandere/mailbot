@@ -30,7 +30,6 @@ public class EmailReaderImpl implements EmailReader {
         try {
             Properties properties = getDefaultProperties();
             Session session = Session.getDefaultInstance(properties, null);
-            session.setDebug(true);
             Store store = session.getStore("imap");
             log.info(String.format("IMAP connection attempt. Login: %s  Password: %s  Domen: %s\n", LOGIN, PASSWORD, DOMEN));
             store.connect(DOMEN, 993, LOGIN, PASSWORD);

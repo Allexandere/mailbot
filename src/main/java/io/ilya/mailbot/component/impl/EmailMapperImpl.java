@@ -27,7 +27,7 @@ public class EmailMapperImpl implements EmailMapper {
         String subject = email.getSubject();
         String date = email.getReceivedDate().toString();
         String text = getTextFromEmail(email);
-        return String.format(PATTERN, fromName, fromAddress, subject, date, text);
+        return String.format(PATTERN, fromName, fromMail, subject, date, text);
     }
 
     private String getTextFromEmail(Message message) throws MessagingException, IOException {
