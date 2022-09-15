@@ -26,11 +26,11 @@ public class EmailSender {
     private EmailMapper emailMapper;
 
     @Value("${bot.group.access_token}")
-    private static String ACCESS_TOKEN;
+    private String ACCESS_TOKEN;
     @Value("${bot.user.id}")
-    private static Integer USER_ID;
+    private int USER_ID;
     @Value("${bot.group.id}")
-    private static int GROUP_ID;
+    private int GROUP_ID;
 
     //Check and send new emails every 3 minutes
     private static final long FIXED_DELAY = 1000 * 60 * 3;

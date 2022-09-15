@@ -17,11 +17,11 @@ import java.util.Properties;
 public class EmailReaderImpl implements EmailReader {
 
     @Value("${email.login}")
-    private static String LOGIN;
+    private String LOGIN;
     @Value("${email.password}")
-    private static String PASSWORD;
+    private String PASSWORD;
     @Value("${email.domen}")
-    private static String DOMEN;
+    private String DOMEN;
     private final static String DEBUG = "false";
 
 
