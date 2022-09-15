@@ -16,7 +16,7 @@ import java.util.Properties;
 @Slf4j
 public class EmailReaderImpl implements EmailReader {
 
-    @Value("${email.login}")
+    @Value("${LOGIN}")
     private String LOGIN;
     @Value("${email.password}")
     private String PASSWORD;
